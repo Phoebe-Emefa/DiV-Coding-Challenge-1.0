@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<a href="index.html"><img src="logo.png" alt="logo"></a>
+
+<!-- signup form -->
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form action="#">
+		<form action="main.html">
             <h1>Create Account</h1><br>
             <span>using your social networks</span>
 			<div class="social-container">
@@ -28,8 +29,10 @@
 			<button>Sign Up</button>
 		</form>
 	</div>
-	<div class="form-container sign-in-container">
-		<form action="#">
+
+	<!-- login form -->
+	<div class="form-container log-in-container">
+		<form action="main.html">
             <h1>Login to your Account</h1><br>
             <span>using your social networks</span>
 			<div class="social-container">
@@ -44,13 +47,17 @@
 			<button>Log In</button>
 		</form>
 	</div>
+
+	<!-- login overlay -->
 	<div class="overlay-container">
 		<div class="overlay">
 			<div class="overlay-panel overlay-left">
 				<h1>One of us?</h1>
-				<p>Sign in if you already have an account with us. We have a lot installed just for you</p>
-				<button class="ghost" id="signIn">Sign In</button>
+				<p>Log in if you already have an account with us. We have a lot installed just for you</p>
+				<button class="ghost" id="logIn">Log In</button>
 			</div>
+
+	<!-- signup overlay -->
 			<div class="overlay-panel overlay-right">
 				<h1>New here?</h1>
 				<p>Sign Up and get exposed to amazing opportunities</p>
@@ -60,9 +67,10 @@
 	</div>
 </div>
 
+<!-- footer -->
 <footer>
 	<p class="text-center">
-		Qualia &copy;
+		BennyCreates &copy;
 		<script>
 		  document.write(new Date().getFullYear());
 		</script>

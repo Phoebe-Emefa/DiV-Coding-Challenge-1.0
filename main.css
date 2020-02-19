@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+	  box-sizing: border-box;
+}
+
+body {
+  background: rgba(0, 0, 0, 0.9);
+  margin: 0;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* navigation */
+nav {
+  background-color: rgb(56, 56, 77);
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+nav li {
+    display: inline;
+  }
+  
+nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 70px;
+  }
+
+.left {
+    left: 10px;
+  }
+
+.logo {
+    height: 80px;
+    width: 80px;
+    margin-left: 20px;
+}
+
+.right {
+    margin-top: 20px;
+  } 
+
+  /* header */
+.showcase::after {
+    content: '';
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://image.ibb.co/gzOBup/showcase.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;
+  }
+  
+.showcase:hover::after {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+  }
+  
+.showcase:hover .content {
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+  }
+  
+.content {
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 50%;
+    margin-top: 105px;
+    margin-left: -145px;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    transition: all 1000ms;
+  }
+  
+.content .logo {
+    height: 280px;
+    width: 280px;
+  }
+  
+.content .title {
+    font-size: 2.2rem;
+    margin-top: 1rem;
+    color: #cb2d3e;
+  }
+  
+.content .text {
+    line-height: 1.7;
+    margin-top: 1rem;
+    font-size: 22px;
+  }
+  
+.container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+  }
+
+  /* services */
+  .information-container {
+    background: #000000;
+    background: -webkit-linear-gradient(45deg, #434343, #000000);
+    background: linear-gradient(45deg, #434343, #000000);
+    background-size: cover;
+    padding: 60px 0;
+  }
+  
+.inner-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+  
+.section-title {
+    text-align: center;
+    color: #ddd;
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+  
+.border {
+    width: 160px;
+    height: 2px;
+    background: #cb2d3e;
+    margin: 40px auto;
+  }
+  
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+.service-box {
+    max-width: 33.33%;
+    padding: 10px;
+    text-align: center;
+    color: #ddd;
+    cursor: pointer;
+  }
+  
+.service-icon {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 3px solid #cb2d3e;
+    transform: rotate(45deg);
+    margin-bottom: 30px;
+    margin-top: 16px;
+  }
+  
+.service-icon i {
+    line-height: 70px;
+    transform: rotate(-45deg);
+    font-size: 26px;
+  }
+  
+.service-box:hover .service-icon {
+    background: #cb2d3e;
+    color: #ddd;
+  }
+  
+.service-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+.description {
+    font-size: 14px;
+  }
+ 
+  
+/* responsiveness of services */
+@media screen and (max-width:960px) {
+    .service-box {
+      max-width: 45%;
+    }
+  }
+  
+@media screen and (max-width:768px) {
+    .service-box {
+      max-width: 50%;
+    }
+  }
+  
+@media screen and (max-width:480px) {
+    .service-box {
+      max-width: 100%;
+    }
+  }
+
+/* about */
+.about-us {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .center {
+    text-align: center;
+    margin: auto;
+  }
+  
+.bg-light {
+    background: #f4f4f4;
+    color: #333;
+  }
+  
+.bg-dark {
+    background: #333;
+    color: #f4f4f4;
+  }
+
+  /* footer */
+  footer {
+    padding: 1.2rem;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Small Screens */
+@media (max-width: 560px) {
+    .showcase::after {
+      height: 50vh;
+    }
+  
+    .content {
+      top: 5%;
+      margin-top: 5px;
+    }
+  
+    .content .logo {
+      margin: 80px;
+      height: 140px;
+      width: 140px;
+    }
+  
+    .content .text {
+      display: none;
+    }
+  
+    .content .title {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .right ul {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .about-us {
+      grid-template-columns: 1fr;
+    }
+
+  }
+  
+  /* Landscape */
+@media (max-height: 500px) {
+    .content .title,
+    .content .text {
+      display: none;
+    }
+  
+    .content {
+      top: 0;
+    }
+  }
+  
